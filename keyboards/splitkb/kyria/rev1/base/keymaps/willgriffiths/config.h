@@ -36,4 +36,4 @@
 #endif
 
 #define HOLD_ON_OTHER_KEY_PRESS
-#define MASTER_RIGHT
+#define EE_HANDS
