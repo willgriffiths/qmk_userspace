@@ -43,8 +43,8 @@ uint16_t alt_tab_timer = 0;
 #define CTL_QUOT MT(MOD_RCTL, KC_QUOTE)
 #define CTL_MINS MT(MOD_RCTL, KC_MINUS)
 #define ALT_ENT  MT(MOD_LALT, KC_ENT)
-#define ALT_TAB  LALT(KC_TAB)
-#define ALT_TAB_R LSFT(LALT(KC_TAB))
+#define CMD_TAB  LGUI(KC_TAB)
+#define CMD_TAB_R LSFT(LGUI(KC_TAB))
 
 
 // Super key
@@ -75,7 +75,7 @@ const uint16_t PROGMEM keymaps[][MATRIX_ROWS][MATRIX_COLS] = {
       KC_TAB,  KC_Q,   KC_W,   KC_E,   KC_R,   KC_T,                                         KC_Y,    KC_U,    KC_I,    KC_O,    KC_P,    KC_BSLS,
       KC_ESC,  KC_A,   KC_S,   KC_D,   KC_F,   KC_G,                                         KC_H,    KC_J,    KC_K,    KC_L,    KC_SCLN, KC_QUOT,
       KC_LCTL, KC_Z,   KC_X,   KC_C,   KC_V,   KC_B,   KC_CCCV,   MOD_HYPR, KC_DEL, XXXXXXX,  KC_N,    KC_M,    KC_COMM, KC_DOT,  KC_SLSH, KC_MINS,
-           LALT(KC_LSFT), LCTL(KC_LSFT), LT(NUMPAD, KC_TAB), KC_LSFT, MT(MOD_LGUI, KC_ENT), MT(MOD_RGUI,KC_BSPC), LT(NAV, KC_SPC), LT(SYM,KC_ENT), KC_RCTL, KC_RALT
+        LALT(KC_LSFT), LCTL(KC_LSFT), LT(NUMPAD, KC_TAB), KC_LSFT, MT(MOD_LGUI, KC_ENT), MT(MOD_RGUI,KC_BSPC), LT(NAV, KC_SPC), LT(SYM,KC_ENT), KC_RCTL, KC_RALT
     ),
 /*
  * Lower Layer: Numpad, Media
@@ -123,7 +123,7 @@ const uint16_t PROGMEM keymaps[][MATRIX_ROWS][MATRIX_COLS] = {
  * ,--------------------------------------------.                              ,--------------------------------------------.
  * |        |      |      |ATAB_R| ATAB |       |                              | PgUp  | PgDn | Home | End  |      | ScrlLk |
  * |--------+------+------+------+------+-------|                              |-------+------+------+------+------+--------|
- * |        |      |      | Enter| ESC  |       |                              | Left  | Down | Up   | Right|      | CapsLk |
+ * |        |      |      | Enter| ESC  | Bkspc |                              | Left  | Down | Up   | Right|      | CapsLk |
  * |--------+------+------+------+------+-------+-------------.  ,-------------+-------+------+------+------+------+--------|
  * |        |      |      |      |      |       |      |      |  |      |      |       |      |      |      |      |        |
  * `----------------------+------+------+-------+------+------|  |------+------+-------+------+------+----------------------'
@@ -132,11 +132,11 @@ const uint16_t PROGMEM keymaps[][MATRIX_ROWS][MATRIX_COLS] = {
  *                        `-----------------------------------'  `-----------------------------------'
  */
     [_NAV] = LAYOUT(
-      _______, _______, _______, ALT_TAB_R, ALT_TAB, _______,                                     KC_PGUP, KC_PGDN, KC_HOME, KC_END , _______, KC_SCRL,
-      _______, _______, _______, KC_ENT, KC_ESC , _______,                                     KC_LEFT, KC_DOWN, KC_UP  , KC_RGHT, _______, KC_CAPS,
+      _______, _______, _______, CMD_TAB_R, CMD_TAB, _______,                                     KC_PGUP, KC_PGDN, KC_HOME, KC_END , _______, KC_SCRL,
+      _______, _______, _______, KC_ENT, KC_ESC , KC_BSPC,                                     KC_LEFT, KC_DOWN, KC_UP  , KC_RGHT, _______, KC_CAPS,
       _______, _______, _______, _______, _______, _______, _______, _______, _______, _______, _______, _______, _______, _______, _______, _______,
                                  _______, _______, _______, _______, _______, _______, _______, _______, _______, _______
-    ),
+    ,
 /*
  * Adjust Layer
  *
