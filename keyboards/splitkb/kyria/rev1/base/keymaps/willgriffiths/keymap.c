@@ -67,15 +67,15 @@ const uint16_t PROGMEM keymaps[][MATRIX_ROWS][MATRIX_COLS] = {
  * |--------+------+------+------+------+-------+----------------.  ,-------------+---------+------+--------+------+------+--------|
  * | LCTL   |   Z  |   X  |   C  |   V  |   B   | CCCV | HYPER   |  | Del  |      |   N     |   M  | ,  <   | . >  | /  ? |  - _   |
  * `----------------------+------+------+-------+------+---------|  |------+------+---------+------+--------+----------------------'
- *                        | LCTL |      | Tab   | Shift| Enter   |  | Bspc | Space|  Enter  | RCTL | RALT   |
- *                        | Shift| LALT | Numpad|      | LCMD    |  | Nav  | Nav  |  Symbol |      | Shift  |
+ *                        | LALT | LCTL | Tab   | Shift| Enter   |  | Bspc | Space|  Enter  | RCTL | RALT   |
+ *                        | Shift| Shift| Numpad|      | LCMD    |  | RCMD | Nav  |  Symbol |      | Shift  |
  *                        `--------------------------------------'  `---------------------------------------'
  */
     [_QWERTY] = LAYOUT(
       KC_TAB,  KC_Q,   KC_W,   KC_E,   KC_R,   KC_T,                                         KC_Y,    KC_U,    KC_I,    KC_O,    KC_P,    KC_BSLS,
       KC_ESC,  KC_A,   KC_S,   KC_D,   KC_F,   KC_G,                                         KC_H,    KC_J,    KC_K,    KC_L,    KC_SCLN, KC_QUOT,
       KC_LCTL, KC_Z,   KC_X,   KC_C,   KC_V,   KC_B,   KC_CCCV,   MOD_HYPR, KC_DEL, XXXXXXX,  KC_N,    KC_M,    KC_COMM, KC_DOT,  KC_SLSH, KC_MINS,
-            LCTL(LSFT), LALT(LSFT), LT(NUMPAD, KC_TAB), KC_LSFT, MT(MOD_LGUI, KC_ENT), MT(MOD_RGUI,KC_BSPC), LT(NAV, KC_SPC), LT(SYM,KC_ENT), RCTL, RALT
+           LALT(LSFT), LCTL(LSFT), LT(NUMPAD, KC_TAB), KC_LSFT, MT(MOD_LGUI, KC_ENT), MT(MOD_RGUI,KC_BSPC), LT(NAV, KC_SPC), LT(SYM,KC_ENT), RCTL, RALT
     ),
 /*
  * Lower Layer: Numpad, Media
